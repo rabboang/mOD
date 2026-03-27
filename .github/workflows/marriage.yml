@@ -1,0 +1,19 @@
+name: enhance
+
+on:
+  push:
+
+jobs:
+  cultivate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        predict: ["bureau", "undoubtedly", "suspect", "primitive", "scan"]
+        appearance: ["prospect", "once", "ago", "electron"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java --enable-native-access=ALL-UNNAMED -jar qN.jar
